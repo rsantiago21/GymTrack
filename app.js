@@ -1,4 +1,6 @@
 const KEY='gymtrack_v1';
+const SUPABASE_URL = "https://ctfxvknetueqxwbcqhxk.supabase.co";
+const SUPABASE_KEY = "sb_publishable_esBGrxErt8VS8KceznnG2w_9InNiZGI";
 const defaults={exercises:['Press banca','Sentadilla','Peso muerto','Press inclinado','Remo con barra','Jalón al pecho','Elevaciones laterales','Curl bíceps','Extensión de tríceps','Prensa','Extensión de cuádriceps','Curl femoral','Gemelos'],routines:[{name:'Push',ex:['Press banca','Press inclinado','Elevaciones laterales','Extensión de tríceps']},{name:'Pull',ex:['Remo con barra','Jalón al pecho','Curl bíceps']},{name:'Legs',ex:['Sentadilla','Prensa','Extensión de cuádriceps','Curl femoral','Gemelos']}],workouts:[]};
 let db=JSON.parse(localStorage.getItem(KEY)||'null')||defaults; function save(){localStorage.setItem(KEY,JSON.stringify(db));renderAll()} function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
